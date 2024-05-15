@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - ms-vscode-remote.remote-wsl
+
+tasks:
+  - init: |
+      sudo apt-get update
+      sudo apt-get install -y xfce4 xfce4-goodies xrdp
+      sudo service xrdp start
+
+ports:
+  - port: 3389
+    onOpen: open-preview
