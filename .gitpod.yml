@@ -1,10 +1,6 @@
 image:
   file: .gitpod.Dockerfile
 
-vscode:
-  extensions:
-    - ms-vscode-remote.remote-wsl
-
 tasks:
   - init: |
       sudo apt-get update
@@ -13,4 +9,8 @@ tasks:
 
 ports:
   - port: 3389
-    onOpen: open-preview
+    onOpen: ignore  # Change `ignore` to `open-preview` or another action if you want to automatically open the port.
+
+vscode:
+  extensions:
+    - ms-vscode-remote.remote-wsl
